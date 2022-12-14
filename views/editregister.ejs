@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit EJS</title>
+</head>
+<body>
+    <h1>Update</h1>
+	<%testdata.forEach(data=>{%>
+		<form method='POST' action='/update'>
+		<input type="text" name="id" value="<%= data._id %>"/>
+		<input type="text" placeholder="name" name="name" value="<%= data.name %>"/>
+		<input type="text" placeholder="quote" name="quote" value="<%= data.quote %>"/>
+		<button type="submit">Update</button>
+	  </form>
+	  <% }) %>
+</body>
+</html>

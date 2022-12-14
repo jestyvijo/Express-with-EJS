@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS</title>
+</head>
+<body>
+    <h1>REGISTER</h1>
+    <form action="/quotes" method="POST">
+        <input type="text" placeholder="name" name="name" />
+        <input type="text" placeholder="quote" name="quote" />
+        <button type="submit">Submit</button>
+      </form>
+      <h2> Quotes </h2>
+    <table border="2">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quotes</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <% for(var i=0;i< test.length;i++){ %>
+        <tr>
+            <td><%= test[i]._id %></td>
+            <td><%= test[i].name %></td>
+            <td><%= test[i].quote %></td>
+            <td><a href="/<%= test[i].name %>"><button>Edit</button></a></td>
+            <td><a href="/delete/<%= test[i].name %>"><button>Delete</button></a></td>
+        </tr>
+        <% } %>
+   </table>
+
+</body>
+</html>

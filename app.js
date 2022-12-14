@@ -1,0 +1,11 @@
+const express=require('express')
+const app=express()
+const router=require('./routedb.js')
+const bodyParser= require('body-parser')
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
+//app.use(express.static('public'))
+app.use('/',router)
+app.listen(3000,function(){
+        console.log('Listening port 3000')
+})

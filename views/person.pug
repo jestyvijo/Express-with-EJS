@@ -1,0 +1,14 @@
+html
+head
+   title Person
+   body
+      form(action = "/person", method = "POST")
+      div
+         label(for = "name") Name: 
+         input(type="text", name = "name",placeholder="Enter the name")
+      br
+      div
+         label(for = "quote") Nationality: 
+         input(name = "quote")
+      br
+      button(type = "submit") Create new person
